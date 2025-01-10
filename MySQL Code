@@ -1,0 +1,50 @@
+-- MySQL Code:
+-- Resetting the full database
+drop database auction;
+create database auction;
+use auction;
+
+
+-- User Table
+create table user_info(
+	user_id int,
+    user_name char(20),
+    pass_word varchar(25),
+    auction_no int
+);
+insert into user_info values(001, "Mark", "ratstoh12",01);
+insert into user_info values(002, "Ashley", "nmqw991?",02);
+insert into user_info values(003, "James", "qwertyjkl1",03);
+insert into user_info values(004, "Oliver", "pinapplepizza123",04);
+insert into user_info values(005, "Emma", "ropotteria9",05);
+
+
+--  Admin Table
+create table admin_info(
+	user_id int,
+    user_name char(20),
+    pass_word varchar(25),
+    auction_no int
+);
+insert into admin_info values(001, "ADMIN", "QWERTY", 001);
+insert into admin_info values(002, "ADMIN2", "1234", 002);
+
+
+-- Auction Items
+create table items(
+    item_id int,
+    item_name char(50),
+    starting_bid float
+);
+insert into items values(241, "Rare Patek Philippe Calatrava Watch", 45);
+insert into items values(232, "2021 Lamborghini Huracan EVO", 367);
+insert into items values(643, "Classic 1957 Chevy Bel Air", 50);
+insert into items values(874, "Authentic Ming Dynasty Porcelain Vase",30);
+insert into items values(675, "Rare 1969 Chevrolet Camaro SS", 40);
+insert into items values(576, "Limited Edition Gibson Explorer Guitar", 7);
+
+
+--  Printing in SQL
+select * from user_info;
+select * from admin_info;
+select * from items;
